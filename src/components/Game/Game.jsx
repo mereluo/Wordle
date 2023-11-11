@@ -37,9 +37,7 @@ function Game() {
     return (
         <div className="game space-y-4 bg-gray-light">
             <h1>Wordle - {difficulty} level </h1>
-            <p>
-                Current Word: {currentWord.length}-Character Long {currentWord}
-            </p>
+            <p>Current Word: {currentWord.length}-Character Long</p>
             <p className="attempt">
                 Attempts Remaining: <span className="attempt-num">{attempts}</span>
             </p>
