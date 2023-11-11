@@ -1,0 +1,27 @@
+.green-letter {
+    background-color: rgb(140, 214, 140);
+}
+
+.yellow-letter {
+    background-color: #fde047;
+}
+
+.gray-letter {
+    background-color: lightgray;
+}
+
+.letter-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    width: 40px;
+    height: 45px;
+    margin: 5px;
+}
+.letter {
+    font-size: 18px;
+}
+.guess-item {
+    display: flex;
+}

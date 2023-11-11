@@ -1,0 +1,9 @@
+li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+li a:hover {
+    color: orange;
+}
