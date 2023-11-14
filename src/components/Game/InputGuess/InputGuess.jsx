@@ -12,6 +12,8 @@ function InputGuess() {
             setAttempts(attempts - 1);
             setHistory([userInput.toLowerCase(), ...history]);
             setIsCorrect(true);
+        } else if (/\d/.test(userInput)) {
+            setFeedback(`The correct word should only contains letters.`);
         } else if (userInput.length != currentWord.length) {
             setFeedback(`The correct word has ${currentWord.length} characters.`);
         } else {
@@ -24,8 +26,8 @@ function InputGuess() {
         }
     };
     return (
-        <div className="input flex flex-col space-y-4">
-            <div className="input-area">
+        <div className="input flex flex-col space-y-4 justify-center items-center">
+            <div className="input-area ">
                 <input
                     type="text"
                     id="userInput"
@@ -39,7 +41,9 @@ function InputGuess() {
                     Guess
                 </button>
             </div>
-            <p>{feedback}</p>
+            <div>
+                <p>{feedback}</p>
+            </div>
         </div>
     );
 }

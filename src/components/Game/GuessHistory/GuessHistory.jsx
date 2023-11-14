@@ -7,11 +7,11 @@ function GuessHistory() {
     const { history } = useGameContext();
     return (
         <div>
-            <ul className="history">
+            <div className="history">
                 {history.map((word, index) => (
-                    <GuessItem index={index} word={word} />
+                    <GuessItem index={index} word={word} key={index} />
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

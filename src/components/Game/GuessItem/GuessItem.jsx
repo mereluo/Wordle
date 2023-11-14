@@ -47,15 +47,13 @@ function GuessItem({ word, index }) {
 
     return (
         <div>
-            <li key={index} className="guess-item">
+            <div className="guess-item">
                 {word.split("").map((letter, letterIndex) => (
-                    <div className={`letter-box ${resultMap[letterIndex]}`}>
-                        <span key={letterIndex} className="letter">
-                            {letter}
-                        </span>
+                    <div key={letterIndex} className={`letter-box ${resultMap[letterIndex]}`}>
+                        <span className="letter">{letter}</span>
                     </div>
                 ))}
-            </li>
+            </div>
         </div>
     );
 }
